@@ -98,6 +98,7 @@ npx electron-packager . "Daily Quote" --platform=win32 --arch=x64 --icon=icon.ic
 <h2>📥 Download the App</h2>
 
 <p>
-👉 <a href="https://github.com/yourusername/DailyQuoteApp/releases" target="_blank"><b>Download Latest Version (Windows)</b></a>
+👉 <a href="https://github.com/Raghavganesan/DAILY-QUOTE-APP-ELECTRONJS/releases
+" target="_blank"><b>Download Latest Version (Windows)</b></a>
 </p>
 
