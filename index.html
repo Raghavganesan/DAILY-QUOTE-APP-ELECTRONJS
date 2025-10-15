@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>💖 Daily Quote</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>💖 Daily Quote</h1>
+    <p class="intro">Welcome to <b>Daily Quote</b> — your little pocket of positivity ✨.</p>
+
+    <div class="menu">
+      <button class="bt1">Click Here</button>
+      <button class="btn2">Want More Quotes</button>
+      <button class="btn3">Take Some Notes!</button>
+    </div>
+
+    <div class="footer">
+      <button id="aboutBtn">👤 Know About the Developer</button>
+    </div>
+
+    <script>
+   const quoteBox = document.createElement("div");
+quoteBox.classList.add("quote-box");
+
+const quoteText = document.createElement("p");
+quoteText.classList.add("quote-text");
+quoteBox.appendChild(quoteText);
+
+      const menuDiv = document.querySelector(".menu");
+      menuDiv.insertAdjacentElement("afterend", quoteBox);
+
+      async function showRandomQuote() {
+  quoteBox.style.display = "block"; // make box appear when fetching
+  quoteText.textContent = "⏳ Fetching a dose of motivation...";
+  try {
+    const res = await fetch("https://zenquotes.io/api/random");
+    const data = await res.json();
+
+    quoteText.textContent = `“${data[0].q}” — ${data[0].a}`;
+    quoteBox.classList.add("visible"); // fade-in animation
+  } catch (err) {
+    console.error(err);
+    quoteText.textContent = "⚠️ Unable to load quote. Please try again later.";
+    quoteBox.classList.add("visible");
+  }
+}
+
+
+
+      // Button 1 – Click Here → random quote
+      document.querySelector(".bt1").addEventListener("click", showRandomQuote);
+
+      // Button 2 – Want More Quotes → new window
+      document.querySelector(".btn2").addEventListener("click", () => {
+        window.open("quotes.html", "quotes", "width=700,height=800,scrollbars=yes");
+      });
+
+      // Button 3 – Notes (future)
+      document.querySelector(".btn3").addEventListener("click", () => {
+  window.open("notes.html", "notes", "width=700,height=700,scrollbars=yes");
+});
+
+      // Footer – About Developer
+      document.getElementById("aboutBtn").addEventListener("click", () => {
+        window.open("about.html", "about", "width=520,height=640");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>About the Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: "Brasika";
+      src: url("fonts/brasika-display-trial.otf") format("opentype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    :root {
+      --bg: #fff1f4;
+      --card: #fff;
+      --text-dark: #2d2a2a;
+      --accent: #ff9aa2;
+      --accent-dark: #ff7b8a;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-dark);
+      font-family: "Brasika", serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: var(--card);
+      width: min(500px, 90vw);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 154, 162, 0.3);
+      text-align: left;
+      border-top: 6px solid var(--accent);
+      animation: fadeIn 0.4s ease;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: var(--text-dark);
+    }
+
+    .line {
+      height: 2px;
+      background: #00000010;
+      margin: 10px 0 25px;
+    }
+
+    .item {
+      margin: 14px 0;
+      font-size: 1rem;
+    }
+
+    .label {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .value {
+      font-family: "Playfair Display", serif;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .value a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .value a:hover {
+      color: var(--text-dark);
+      text-decoration: underline;
+    }
+
+    .back {
+      margin-top: 30px;
+      display: block;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: "Brasika", serif;
+      font-size: 1rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .back:hover {
+      background: var(--accent-dark);
+      transform: scale(1.02);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>👨‍💻 About the Developer</h1>
+    <div class="line"></div>
+
+    <div class="item"><span class="label">Name:</span> <span class="value">Raghavendran Ganesan</span></div>
+    <div class="item"><span class="label">Email:</span> <span class="value"><a href="mailto:raghavendan2016@gmail.com">raghavendan2016@gmail.com</a></span></div>
+    <div class="item"><span class="label">Phone:</span> <span class="value"><a href="tel:+917305527170">+91 7305527170</a></span></div>
+    <div class="item"><span class="label">LinkedIn:</span> <span class="value"><a href="https://www.linkedin.com/in/raghavendran-ganesan-87509725b" target="_blank">
+  Raghavendran Ganesan
+</a>
+</span></div>
+    <div class="item"><span class="label">GitHub:</span> <span class="value"><a href="#" target="_blank">Raghavendran Ganesan</a></span></div>
+
+    <a class="back" href="#" onclick="window.close()">← Back to App</a>
+  </div>
+</body>
+</html>
