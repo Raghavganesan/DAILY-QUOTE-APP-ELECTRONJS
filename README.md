@@ -1,1 +1,1 @@
-# DAILY-QUOTE-APP-ELECTRONJS
+<h1 align="center">💖 Daily Quote — Electron Desktop App</h1>
